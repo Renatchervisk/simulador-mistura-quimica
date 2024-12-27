@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Mistura de Produtos Químicos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Mistura de Produtos Químicos</h1>
+        
+        <div class="selecao-produtos">
+            <label for="produto1">Produto 1:</label>
+            <select id="produto1">
+                <option value="">Selecione</option>
+                <option value="agua_sanitaria">Água Sanitária</option>
+                <option value="alcool">Álcool</option>
+                <option value="amonia">Amônia</option>
+                <option value="bicarbonato_sodio">Bicarbonato de Sódio</option>
+                <option value="desengordurante">Desengordurante</option>
+                <option value="desinfetante">Desinfetante</option>
+                <option value="detergente">Detergente</option>
+                <option value="limpador_multiuso">Limpador Multiuso</option>
+                <option value="sabao_po">Sabão em Pó</option>
+                <option value="vinagre">Vinagre</option>
+                <option value="agua_oxigenada">Agua_Oxigenada</option>
+            </select>
+
+            <label for="produto2">Produto 2:</label>
+            <select id="produto2">
+                <option value="">Selecione</option>
+                <option value="agua_sanitaria">Água Sanitária</option>
+                <option value="alcool">Álcool</option>
+                <option value="amonia">Amônia</option>
+                <option value="bicarbonato_sodio">Bicarbonato de Sódio</option>
+                <option value="desengordurante">Desengordurante</option>
+                <option value="desinfetante">Desinfetante</option>
+                <option value="detergente">Detergente</option>
+                <option value="limpador_multiuso">Limpador Multiuso</option>
+                <option value="sabao_po">Sabão em Pó</option>
+                <option value="vinagre">Vinagre</option>
+                <option value="agua oxigenada">Agua_Oxigenada</option>
+                
+            </select>
+            <button id="btn-misturar">Misturar Produtos</button>
+            
+            <div class="tap">
+              <div class="water-stream" id="water-stream"></div>
+            </div>
+            <div class="beaker">
+            <div class="beaker-top"></div>
+            <div class="beaker-content">
+                <div class="liquid" id="liquid"></div>
+                <div class="bubbles" id="bubbles"></div>
+                <div class="graduation-marks">
+                    <div class="graduation-mark">100%</div>
+                    <div class="graduation-mark">75%</div>
+                    <div class="graduation-mark">50%</div>
+                    <div class="graduation-mark">25%</div>
+                    <div class="graduation-mark">0%</div>
+                </div>
+            </div>
+            <div class="beaker-bottom"></div>
+        </div>
+
+      </div>
+        
+      <div class="visualizacao">
+          
+          <div id="animacao-produtos"> </div>
+      </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(90deg, #ff7f50, #1e90ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #e4e00c;
+  margin-bottom: 50px;
+  background-color: #39b11b;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 5px 10px 10px yellowgreen
+}
+
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+.container {
+  max-width: 800px;
+  background: rgba(166, 236, 238, 0.959);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  
+  text-align: center;
+  position:relative;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+select, button {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 20px;
+  border-radius: 8px;
+  background-color: rgb(30, 7, 238);
+}
+
+.beaker {
+  width: 300px;
+  height: 360px;
+  position: relative;
+  margin: 50px auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.beaker-top, .beaker-bottom {
+  background: linear-gradient(to bottom, rgba(51, 236, 5, 0.9), rgba(235, 193, 6, 0.89));
+  border: 3px solid #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.beaker-top {
+  width: 270px;
+  height: 35px;
+  border-bottom: none;
+  top: 0;
+}
+
+.beaker-content {
+  width: 240px;
+  height: 300px;
+  background: linear-gradient(135deg,white rgba(223, 190, 8, 0.979));
+  border: 3px solid #000;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+}
+
+.beaker-bottom {
+  width: 270px;
+  height: 35px;
+  border-top: none;
+  border-radius: 0 0 20% 20%;
+  bottom: 0;
+}
+
+.liquid {
+  width: 100%;
+  height: 0;
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  transition: height 1s ease, 
+  background-color 1s ease;
+}
+
+.graduation-marks {
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #333;
+}
+
+.graduation-mark {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tap {
+  position: absolute;
+  top: 190px; /* Ajuste para posicionar a torneira acima do frasco */
+  left: 50%;
+  transform: translateX(-50%);
+  width: -100px;
+  height: 60px;
+  background-color: #555;
+  border-radius: 20px 20px 0 0;
+  border: 3px solid #333;
+}
+
+.tap:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 25px;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+.tap:after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.water-stream {
+  width: 10px;
+  height: 0;
+  background: rgba(0, 0, 255, 0.7);
+  position: absolute;
+  top: 60px; /* Ajuste para a água começar a cair da torneira */
+  left: 50%;
+  transform: translateX(-50%);
+  transition: height 1s ease;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow:hidden ;
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  animation: rise 3s infinite ease-in-out;
+}
+
+@keyframes rise {
+  0% {
+      bottom: 0;
+      opacity: 1;
+      transform: scale(0.5);
+  }
+  100% {
+      bottom: 100%;
+      opacity: 0;
+      transform: scale(1);
+  }
+}
