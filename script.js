@@ -55,22 +55,28 @@ function verificarMistura(produto1, produto2) {
             gas: true
         },
         'alcool+vinagre': {
-            descricao: 'Mistura segura, liberação de gás carbônico (CO₂) efervescente.',
-            reacao: 'NaHCO₃ + CH₃COOH → CO₂ (gás) + H₂O + NaCH₃COO',
+            descricao: 'Mistura segura,a combinação desses dois produtos pode liberar um odor forte de ésteres, especialmente se for aquecido, mas não forma compostos tóxicos ou perigosos como resultado direto.',
+            reacao: 'NaHCO₃ + CH₃COOH → CO₂ + H₂O + NaCH₃COO',
             toxico: false,
-            gas: true
+            gas: false
         },
         'agua_sanitaria+alcool': {
             descricao: 'Mistura perigosa! Libera cloroacetona, o clorofórmio e o ácido clorídrico. Podem causar irritação e queimaduras, prejudicar o sistema nervoso central e afetar os pulmões, rins, fígado, olhos e a pele. .',
             reacao: 'NaClO + C₂H₅OH → CHCl₃ (clorofórmio) + H₂O',
             toxico: true,
-            
         },
-        'vinagre+desinfetante': {
-            descricao: 'Mistura segura, mas com leve liberação de gás CO₂.',
-            reacao: 'NaHCO₃ + CH₃COOH → CO₂ (gás) + H₂O + NaCH₃COO',
+        'vinagre+bicarbonato de sodio': {
+            descricao: 'Mistura segura,misturar vinagre com bicarbonato de sódio (NaHCO₃) é seguro em geral e não representa um perigo significativo.',
+            reacao: 'NaHCO₃ + CH₃COOH → CO₂ + H₂O + NaCH₃COO',
             toxico: false,
-            gas: true
+            gas: false
+
+        },
+        'alvejante+vinagre': {
+            descricao: 'Mistura perigosa!Formação de gás tóxico (cloro).',
+            reacao: 'NaClO+CH₃COOH→Cl₂+H₂O+NaCH₃COO .',
+            toxico: true,
+            gas:true
         },
         'detergente+desengordurante': {
             descricao: 'Mistura segura, sem reações químicas significativas.',
@@ -86,9 +92,29 @@ function verificarMistura(produto1, produto2) {
         },
         'agua_oxigenada+vinagre': {
             descricao: 'Mistura Perigosa!Forma o ácido peracético, substância que pode ser tóxica para sua saúde causa danos aos olhos,á pele,ao nariz,a garganta e aos pulmões.',
-            reacao: 'Não ocorre reação química ',
+            reacao: 'H₂O₂+CH₃COOH→CH₃COOOH+H₂O.',
             toxico: true,
+            gas:false
+
+        },
+        'alvejante+limpa vidros': {
+            descricao: 'Mistura perigosa!Formação de gás tóxico (cloramina).',
+            reacao: 'NaClO+NH₃→NH₂Cl+NaOH.',
+            toxico: true,
+            gas:true
              
+
+        },
+        'amaciante+alcool': {
+            descricao: 'Mistura segura, sem reações químicas significativas.',
+            reacao: 'Não ocorre reação química significativa.',
+            toxico: false,
+
+
+        },
+        'detergente +alcool': {
+            descricao: 'Mistura segura!Têm um alto potencial de higienização.',
+            toxico: false,
 
 
 
